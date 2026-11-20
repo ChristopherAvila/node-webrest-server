@@ -4,8 +4,7 @@ import { PrismaPg } from '@prisma/adapter-pg';
 
 const adapter = new PrismaPg({ 
 
-    connectionString : envs.POSTGRES_URL!,
-
+    connectionString : process.env.POSTGRES_URL!,
 });
 
 export const prisma = new PrismaClient( { adapter });

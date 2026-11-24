@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsnd --respawn --clear src/app.ts",
+    "dev": "tsx watch src/app.ts",
     "build": "rimraf ./dist && prisma generate && tsc",
     "start": "node dist/app.js",
-    "prisma:migrate:prod" : "prisma migrate deploy"
+    "prisma:migrate:prod": "prisma migrate deploy"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "prisma": "^7.10.1",
     "rimraf": "^6.1.4",
     "ts-node-dev": "^2.0.0",
+    "tsx": "^4.23.15",
     "typescript": "^6.0.3"
   },
   "dependencies": {
@@ -28,5 +29,8 @@
     "env-var": "^7.5.0",
     "express": "^5.3.0",
     "pg": "^8.23.1"
+  },
+  "overrides": {
+    "effect": "3.22.1"
   }
 }

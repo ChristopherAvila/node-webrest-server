@@ -1,7 +1,7 @@
 export class UpdateTodoDto{
 
     constructor(
-        private readonly id : number,
+        public readonly id : number,
         private readonly text? : string,
         private readonly completedAT? : Date
     ){}
